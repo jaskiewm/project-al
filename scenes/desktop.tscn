@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=2]
+[gd_scene load_steps=125 format=2]
 
 [ext_resource path="res://art/login_ui/MainMenuBackground.jpg" type="Texture" id=1]
 [ext_resource path="res://fonts/Inconsolota/Inconsolata-SemiBold.ttf" type="DynamicFontData" id=2]
@@ -38,6 +38,7 @@
 [ext_resource path="res://scripts/MusicControl.gd" type="Script" id=36]
 [ext_resource path="res://Sounds/Laugh Women.tres" type="AudioStream" id=37]
 [ext_resource path="res://scripts/emailTimeLabel.gd" type="Script" id=38]
+[ext_resource path="res://addons/dialogic/Documentation/Theme/Font/NotoSans-Bold.ttf" type="DynamicFontData" id=39]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 1 )
@@ -62,11 +63,12 @@ texture = ExtResource( 24 )
 region_rect = Rect2( 0, 0, 256, 256 )
 
 [sub_resource type="StyleBoxFlat" id=66]
-bg_color = Color( 0.168627, 0.168627, 0.168627, 1 )
+bg_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 
 [sub_resource type="StyleBoxEmpty" id=2]
 
 [sub_resource type="DynamicFont" id=3]
+size = 26
 font_data = ExtResource( 2 )
 
 [sub_resource type="StyleBoxEmpty" id=4]
@@ -84,7 +86,20 @@ region_rect = Rect2( 0, 0, 256, 256 )
 [sub_resource type="StyleBoxTexture" id=6]
 texture = ExtResource( 31 )
 region_rect = Rect2( 0, 0, 256, 256 )
-modulate_color = Color( 1, 1, 1, 0.47451 )
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 35 )
+region_rect = Rect2( 0, 0, 256, 256 )
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 32 )
+region_rect = Rect2( 0, 0, 256, 256 )
+
+[sub_resource type="StyleBoxTexture" id=12]
+texture = ExtResource( 32 )
+region_rect = Rect2( 0, 0, 256, 256 )
 
 [sub_resource type="StyleBoxTexture" id=55]
 texture = ExtResource( 34 )
@@ -100,22 +115,42 @@ modulate_color = Color( 1, 1, 1, 0.67451 )
 texture = ExtResource( 29 )
 region_rect = Rect2( 0, 0, 256, 256 )
 
-[sub_resource type="StyleBoxEmpty" id=9]
+[sub_resource type="StreamTexture" id=89]
+flags = 4
+load_path = "res://.import/Power_Icon_Hover.png-1597257a342f26f2f6244dc3dd7be7a4.stex"
 
-[sub_resource type="StyleBoxTexture" id=10]
-texture = ExtResource( 35 )
+[sub_resource type="StyleBoxTexture" id=84]
+texture = SubResource( 89 )
 region_rect = Rect2( 0, 0, 256, 256 )
 
-[sub_resource type="StyleBoxTexture" id=11]
-texture = ExtResource( 32 )
+[sub_resource type="StreamTexture" id=90]
+flags = 4
+load_path = "res://.import/Power_Icon.png-a7181c9a0688fe71680efac9050def6e.stex"
+
+[sub_resource type="StyleBoxTexture" id=86]
+texture = SubResource( 90 )
 region_rect = Rect2( 0, 0, 256, 256 )
 
-[sub_resource type="StyleBoxTexture" id=12]
-texture = ExtResource( 32 )
+[sub_resource type="StreamTexture" id=91]
+flags = 4
+load_path = "res://.import/Power_Icon.png-a7181c9a0688fe71680efac9050def6e.stex"
+
+[sub_resource type="StyleBoxTexture" id=88]
+texture = SubResource( 91 )
 region_rect = Rect2( 0, 0, 256, 256 )
-modulate_color = Color( 1, 1, 1, 0.65098 )
+
+[sub_resource type="StyleBoxFlat" id=73]
+bg_color = Color( 0.152941, 0.576471, 0.729412, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxEmpty" id=13]
+
+[sub_resource type="DynamicFont" id=82]
+size = 23
+font_data = ExtResource( 2 )
 
 [sub_resource type="StyleBoxEmpty" id=14]
 
@@ -130,7 +165,6 @@ region_rect = Rect2( 0, 0, 256, 256 )
 [sub_resource type="StyleBoxTexture" id=17]
 texture = ExtResource( 30 )
 region_rect = Rect2( 0, 0, 256, 256 )
-modulate_color = Color( 1, 1, 1, 0.607843 )
 
 [sub_resource type="StyleBoxEmpty" id=69]
 
@@ -203,13 +237,6 @@ bg_color = Color( 0.45098, 0.517647, 0.576471, 1 )
 
 [sub_resource type="StyleBoxEmpty" id=35]
 
-[sub_resource type="StyleBoxFlat" id=73]
-bg_color = Color( 0, 0.270588, 0.368627, 1 )
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
 [sub_resource type="StyleBoxFlat" id=36]
 bg_color = Color( 0.0745098, 0.0862745, 0.172549, 0.764706 )
 
@@ -253,11 +280,13 @@ size = 19
 font_data = ExtResource( 15 )
 
 [sub_resource type="StyleBoxFlat" id=49]
-bg_color = Color( 0.133333, 0.152941, 0.207843, 1 )
+bg_color = Color( 0.226563, 0.226563, 0.226563, 1 )
 
 [sub_resource type="StyleBoxTexture" id=53]
 texture = ExtResource( 32 )
-region_rect = Rect2( 0, 0, 256, 256 )
+region_rect = Rect2( 0, 0, 255.955, 256 )
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
 
 [sub_resource type="StyleBoxTexture" id=51]
 texture = ExtResource( 29 )
@@ -377,6 +406,10 @@ tracks/0/keys = {
 "values": [ Vector2( 12, 32 ), Vector2( 574, 32 ) ]
 }
 
+[sub_resource type="DynamicFont" id=81]
+size = 32
+font_data = ExtResource( 39 )
+
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -458,15 +491,18 @@ margin_top = -64.0
 custom_styles/panel = SubResource( 66 )
 
 [node name="Start" type="PanelContainer" parent="TaskbarPanel"]
+visible = false
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = -64.0
-margin_right = 72.0
+margin_left = 4.0
+margin_top = -63.0
+margin_right = 101.0
+margin_bottom = -1.0
 custom_styles/panel = SubResource( 2 )
 
 [node name="StartButton" type="Button" parent="TaskbarPanel/Start"]
-margin_right = 72.0
-margin_bottom = 64.0
+margin_right = 97.0
+margin_bottom = 62.0
 custom_fonts/font = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
 text = "Start"
@@ -474,43 +510,26 @@ text = "Start"
 [node name="Emails" type="PanelContainer" parent="TaskbarPanel"]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 80.0
+margin_left = 74.0
 margin_top = -56.0
-margin_right = 480.0
+margin_right = 483.0
 margin_bottom = 344.0
 rect_scale = Vector2( 0.120001, 0.119995 )
 custom_styles/panel = SubResource( 5 )
 
 [node name="EmailsButton" type="Button" parent="TaskbarPanel/Emails"]
-margin_right = 400.0
+margin_right = 409.0
 margin_bottom = 400.0
 custom_styles/hover = SubResource( 7 )
 custom_styles/pressed = SubResource( 8 )
 custom_styles/normal = SubResource( 6 )
 
-[node name="Messenger" type="PanelContainer" parent="TaskbarPanel"]
-anchor_top = 1.0
-anchor_bottom = 1.0
-margin_left = 210.0
-margin_top = -56.0
-margin_right = 610.0
-margin_bottom = 344.0
-rect_scale = Vector2( 0.120001, 0.119995 )
-custom_styles/panel = SubResource( 5 )
-
-[node name="MessengerButton" type="Button" parent="TaskbarPanel/Messenger"]
-margin_right = 400.0
-margin_bottom = 400.0
-custom_styles/hover = SubResource( 55 )
-custom_styles/pressed = SubResource( 56 )
-custom_styles/normal = SubResource( 57 )
-
 [node name="VideoCall" type="PanelContainer" parent="TaskbarPanel"]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 144.0
+margin_left = 138.0
 margin_top = -56.0
-margin_right = 208.0
+margin_right = 202.0
 margin_bottom = 8.0
 rect_scale = Vector2( 0.76, 0.75999 )
 custom_styles/panel = SubResource( 9 )
@@ -522,6 +541,54 @@ custom_styles/hover = SubResource( 10 )
 custom_styles/pressed = SubResource( 11 )
 custom_styles/normal = SubResource( 12 )
 
+[node name="Messenger" type="PanelContainer" parent="TaskbarPanel"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 202.0
+margin_top = -56.0
+margin_right = 613.0
+margin_bottom = 344.0
+rect_scale = Vector2( 0.120001, 0.119995 )
+custom_styles/panel = SubResource( 5 )
+
+[node name="MessengerButton" type="Button" parent="TaskbarPanel/Messenger"]
+margin_right = 411.0
+margin_bottom = 400.0
+custom_styles/hover = SubResource( 55 )
+custom_styles/pressed = SubResource( 56 )
+custom_styles/normal = SubResource( 57 )
+
+[node name="Power" type="PanelContainer" parent="TaskbarPanel"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = -56.0
+margin_right = 419.0
+margin_bottom = 344.0
+rect_scale = Vector2( 0.120001, 0.119995 )
+custom_styles/panel = SubResource( 5 )
+
+[node name="PowerButton" type="Button" parent="TaskbarPanel/Power"]
+margin_right = 409.0
+margin_bottom = 400.0
+custom_styles/hover = SubResource( 84 )
+custom_styles/pressed = SubResource( 86 )
+custom_styles/normal = SubResource( 88 )
+
+[node name="MessengerNotif" type="Panel" parent="TaskbarPanel"]
+margin_left = 241.0
+margin_top = 7.0
+margin_right = 254.0
+margin_bottom = 20.0
+custom_styles/panel = SubResource( 73 )
+
+[node name="EmailNotif" type="Panel" parent="TaskbarPanel"]
+margin_left = 111.0
+margin_top = 7.0
+margin_right = 124.0
+margin_bottom = 20.0
+custom_styles/panel = SubResource( 73 )
+
 [node name="Time" type="PanelContainer" parent="TaskbarPanel"]
 anchor_left = 1.0
 anchor_top = 1.0
@@ -532,9 +599,10 @@ margin_top = -64.0
 custom_styles/panel = SubResource( 13 )
 
 [node name="TimeLabel" type="Label" parent="TaskbarPanel/Time"]
-margin_top = 25.0
+margin_top = 19.0
 margin_right = 120.0
-margin_bottom = 39.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 82 )
 text = "TIME"
 align = 1
 valign = 1
@@ -565,7 +633,7 @@ margin_right = 1706.0
 margin_bottom = 55.0
 custom_styles/panel = SubResource( 69 )
 
-[node name="Button" type="Button" parent="TaskbarPanel/Music"]
+[node name="MusicButton" type="Button" parent="TaskbarPanel/Music"]
 margin_right = 48.0
 margin_bottom = 48.0
 custom_styles/hover = SubResource( 70 )
@@ -1244,13 +1312,6 @@ We're looking forward to working with you!
 
 Company X"
 
-[node name="EmailNotif" type="Panel" parent="."]
-margin_left = 117.0
-margin_top = 1023.0
-margin_right = 130.0
-margin_bottom = 1036.0
-custom_styles/panel = SubResource( 73 )
-
 [node name="VideoCallControl" type="Control" parent="."]
 visible = false
 anchor_left = 0.5
@@ -1415,11 +1476,13 @@ script = ExtResource( 19 )
 [node name="VBoxContainer" type="VBoxContainer" parent="StartControl"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_constants/separation = 1
+margin_left = 2.0
+margin_right = 2.0
+custom_constants/separation = 0
 
 [node name="VideoCall" type="Button" parent="StartControl/VBoxContainer"]
 margin_right = 120.0
-margin_bottom = 39.0
+margin_bottom = 40.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_styles/normal = SubResource( 49 )
@@ -1427,24 +1490,27 @@ custom_styles/normal = SubResource( 49 )
 [node name="HBoxContainer" type="HBoxContainer" parent="StartControl/VBoxContainer/VideoCall"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+custom_constants/separation = 5
 
 [node name="PanelContainer" type="PanelContainer" parent="StartControl/VBoxContainer/VideoCall/HBoxContainer"]
-margin_right = 40.0
-margin_bottom = 39.0
-rect_min_size = Vector2( 40, 20 )
+margin_right = 30.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
 custom_styles/panel = SubResource( 53 )
 
 [node name="Label" type="Label" parent="StartControl/VBoxContainer/VideoCall/HBoxContainer"]
-margin_left = 44.0
-margin_top = 12.0
-margin_right = 107.0
-margin_bottom = 26.0
+margin_left = 35.0
+margin_top = 13.0
+margin_right = 98.0
+margin_bottom = 27.0
 text = "Video Call"
 
 [node name="StartMessenger" type="Button" parent="StartControl/VBoxContainer"]
 margin_top = 40.0
 margin_right = 120.0
-margin_bottom = 79.0
+margin_bottom = 80.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_styles/normal = SubResource( 49 )
@@ -1452,24 +1518,27 @@ custom_styles/normal = SubResource( 49 )
 [node name="HBoxContainer" type="HBoxContainer" parent="StartControl/VBoxContainer/StartMessenger"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+custom_constants/separation = 5
 
 [node name="PanelContainer" type="PanelContainer" parent="StartControl/VBoxContainer/StartMessenger/HBoxContainer"]
-margin_right = 40.0
-margin_bottom = 39.0
-rect_min_size = Vector2( 40, 20 )
+margin_right = 30.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
 custom_styles/panel = SubResource( 51 )
 
 [node name="Label" type="Label" parent="StartControl/VBoxContainer/StartMessenger/HBoxContainer"]
-margin_left = 44.0
-margin_top = 12.0
-margin_right = 114.0
-margin_bottom = 26.0
+margin_left = 35.0
+margin_top = 13.0
+margin_right = 105.0
+margin_bottom = 27.0
 text = "Messenger"
 
 [node name="Email" type="Button" parent="StartControl/VBoxContainer"]
 margin_top = 80.0
 margin_right = 120.0
-margin_bottom = 119.0
+margin_bottom = 120.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_styles/normal = SubResource( 49 )
@@ -1477,18 +1546,21 @@ custom_styles/normal = SubResource( 49 )
 [node name="HBoxContainer" type="HBoxContainer" parent="StartControl/VBoxContainer/Email"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+custom_constants/separation = 5
 
 [node name="PanelContainer2" type="PanelContainer" parent="StartControl/VBoxContainer/Email/HBoxContainer"]
-margin_right = 40.0
-margin_bottom = 39.0
-rect_min_size = Vector2( 40, 20 )
+margin_right = 30.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
 custom_styles/panel = SubResource( 52 )
 
 [node name="Label" type="Label" parent="StartControl/VBoxContainer/Email/HBoxContainer"]
-margin_left = 44.0
-margin_top = 12.0
-margin_right = 79.0
-margin_bottom = 26.0
+margin_left = 35.0
+margin_top = 13.0
+margin_right = 70.0
+margin_bottom = 27.0
 text = "Email"
 
 [node name="Logout" type="Button" parent="StartControl/VBoxContainer"]
@@ -1502,17 +1574,20 @@ custom_styles/normal = SubResource( 49 )
 [node name="HBoxContainer" type="HBoxContainer" parent="StartControl/VBoxContainer/Logout"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+custom_constants/separation = 5
 
 [node name="PanelContainer" type="PanelContainer" parent="StartControl/VBoxContainer/Logout/HBoxContainer"]
-margin_right = 40.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 40, 20 )
+margin_right = 30.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
 custom_styles/panel = SubResource( 50 )
 
 [node name="Label" type="Label" parent="StartControl/VBoxContainer/Logout/HBoxContainer"]
-margin_left = 44.0
+margin_left = 35.0
 margin_top = 13.0
-margin_right = 87.0
+margin_right = 78.0
 margin_bottom = 27.0
 text = "Logout"
 
@@ -1974,13 +2049,6 @@ text = "This is the fourth time attempting to reach you..."
 valign = 1
 clip_text = true
 
-[node name="MessengerNotif" type="Panel" parent="."]
-margin_left = 247.0
-margin_top = 1023.0
-margin_right = 260.0
-margin_bottom = 1036.0
-custom_styles/panel = SubResource( 73 )
-
 [node name="Testing Button" type="Button" parent="."]
 visible = false
 margin_left = 1611.0
@@ -2032,14 +2100,29 @@ color = Color( 1, 1, 1, 0.788235 )
 anims/RESET = SubResource( 74 )
 anims/loading_bar = SubResource( 75 )
 
+[node name="LoadingBar" type="Label" parent="LoadingBar"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -285.0
+margin_top = -108.0
+margin_right = 302.0
+margin_bottom = -21.0
+custom_fonts/font = SubResource( 81 )
+text = "INSTALLING"
+align = 1
+valign = 2
+
 [connection signal="pressed" from="ProjectAlProgram" to="." method="_on_ProjectAlProgram_pressed"]
 [connection signal="pressed" from="TaskbarPanel/Start/StartButton" to="StartControl" method="_on_StartButton_pressed"]
 [connection signal="pressed" from="TaskbarPanel/Emails/EmailsButton" to="EmailsControl" method="_on_EmailsButton_pressed"]
 [connection signal="pressed" from="TaskbarPanel/Emails/EmailsButton" to="EmailsControl/EmailsList/EmailsVBoxContainer" method="_on_EmailsButton_pressed"]
-[connection signal="pressed" from="TaskbarPanel/Messenger/MessengerButton" to="MessengerControl" method="_on_MessengerButton_pressed"]
 [connection signal="pressed" from="TaskbarPanel/VideoCall/VideoCallButton" to="VideoCallControl" method="_on_VideoCallButton_pressed"]
+[connection signal="pressed" from="TaskbarPanel/Messenger/MessengerButton" to="MessengerControl" method="_on_MessengerButton_pressed"]
+[connection signal="pressed" from="TaskbarPanel/Power/PowerButton" to="." method="_on_PowerButton_pressed"]
 [connection signal="pressed" from="TaskbarPanel/Volume/VolumeButton" to="VolumeControl" method="_on_VolumeButton_pressed"]
-[connection signal="pressed" from="TaskbarPanel/Music/Button" to="MusicControl" method="_on_Button_pressed"]
+[connection signal="pressed" from="TaskbarPanel/Music/MusicButton" to="MusicControl" method="_on_Button_pressed"]
 [connection signal="pressed" from="EmailsControl/TitleBar/CloseButton" to="EmailsControl" method="_on_CloseButton_pressed"]
 [connection signal="pressed" from="EmailsControl/EmailsList/EmailsVBoxContainer/EmailEnd1" to="EmailsControl/EmailsList/EmailsVBoxContainer" method="_on_EmailEnd1_pressed"]
 [connection signal="pressed" from="EmailsControl/EmailsList/EmailsVBoxContainer/EmailEnd1" to="EmailsControl/EmailPreview" method="_on_EmailEnd1_pressed"]
