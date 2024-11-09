@@ -28,7 +28,7 @@
     ·
     <a href="https://github.com/jaskiewm/project-al/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a> -->
 <!--     .
-    <a href="https://oinkle.itch.io/pong-remake">Itch.io Link</a> -->
+    <a href="https://oinkle.itch.io/project-al">Itch.io Link</a> -->
   </p>
 </div>
 
@@ -37,7 +37,10 @@
 
 <!-- USAGE EXAMPLES -->
 ### Installation & Usage
-Install the ZIP file and you are ready to play!
+Install the current build <a href="https://oinkle.itch.io/project-al?secret=GYB2mnOLq2AxIzU6aU7qoHQyuuY">here!</a>
+
+### Game Screenshots
+![Product-Cover]
 
 <!-- CONTRIBUTING -->
 ### Contributors:
@@ -52,18 +55,20 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [in-progress]: https://img.shields.io/badge/project--status-work--in--progress-orange?style=for-the-badge
-[contributors-shield]: https://img.shields.io/github/contributors/jaskiewm/PONG.svg?style=for-the-badge
-[contributors-url]: https://github.com/jaskiewm/PONG/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/jaskiewm/PONG.svg?style=for-the-badge
-[forks-url]: https://github.com/jaskiewm/PONG/network/members
-[stars-shield]: https://img.shields.io/github/stars/jaskiewm/PONG.svg?style=for-the-badge
-[stars-url]: https://github.com/jaskiewm/PONG/stargazers
-[issues-shield]: https://img.shields.io/github/issues/jaskiewm/PONG.svg?style=for-the-badge
-[issues-url]: https://github.com/jaskiewm/PONG/issues
-[license-shield]: https://img.shields.io/github/license/jaskiewm/PONG.svg?style=for-the-badge
-[license-url]: https://github.com/jaskiewm/PONG/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/jaskiewm/project-al.svg?style=for-the-badge
+[contributors-url]: https://github.com/jaskiewm/project-al/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/jaskiewm/project-al.svg?style=for-the-badge
+[forks-url]: https://github.com/jaskiewm/project-al/network/members
+[stars-shield]: https://img.shields.io/github/stars/jaskiewm/project-al.svg?style=for-the-badge
+[stars-url]: https://github.com/jaskiewm/project-al/stargazers
+[issues-shield]: https://img.shields.io/github/issues/jaskiewm/project-al.svg?style=for-the-badge
+[issues-url]: https://github.com/jaskiewm/project-al/issues
+[license-shield]: https://img.shields.io/github/license/jaskiewm/project-al.svg?style=for-the-badge
+[license-url]: https://github.com/jaskiewm/project-al/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/jaskiewm
 [product-screenshot]: images/screenshot.png
 [Godot]: https://img.shields.io/badge/Godot%20Engine-478CBF?logo=godotengine&logoColor=fff&style=flat
 [Godot-url]: https://godotengine.org/
+[Product-Cover]:art/GameCoverSmall.jpg
+
