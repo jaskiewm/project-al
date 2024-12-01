@@ -1,5 +1,5 @@
 <a id="readme-top"></a>
-![in-progress]
+![complete]
 <br><br>
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -21,10 +21,10 @@
   <p align="center">
     Welcome to Project Al, an interactive horror visual novel about AI chatbots.
     The game was made using the Godot Engine which began as a game jam project, and slowly grew into more of a short visual novel.
-    <br>
+<!--         <br>
     Please note, this project is still in development
     <br>
-<!--     <a href="https://github.com/jaskiewm/project-al/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+<a href="https://github.com/jaskiewm/project-al/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
     <a href="https://github.com/jaskiewm/project-al/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a> -->
 <!--     .
@@ -55,6 +55,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [in-progress]: https://img.shields.io/badge/project--status-work--in--progress-orange?style=for-the-badge
+[complete]: https://img.shields.io/badge/project--status-complete-green?style=for-the-badge
 [contributors-shield]: https://img.shields.io/github/contributors/jaskiewm/project-al.svg?style=for-the-badge
 [contributors-url]: https://github.com/jaskiewm/project-al/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/jaskiewm/project-al.svg?style=for-the-badge
