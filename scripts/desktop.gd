@@ -15,7 +15,7 @@ func _process(delta):
 		projectAlClick = 0
 		projectAlClickTime = 0
 
-
+# Not needed if other button is used
 func _on_Logout_pressed():
 	ClickSound.play()
 	$AudioManager/ShutDown.play()
@@ -34,3 +34,17 @@ func _on_ProjectAlProgram_pressed():
 #This button is used for testing purposes only. It is used to skip to the final dialogue with Al
 func _on_Button_pressed():
 	GlobalVar.timelineDialogueNumber = 3
+
+
+func _on_PowerButton_pressed():
+	ClickSound.play()
+	$AudioManager/ShutDown.play()
+	yield(get_tree().create_timer(1.0), "timeout")
+	get_tree().quit()
+
+
+func _on_ExitGame_pressed():
+	ClickSound.play()
+	$AudioManager/ShutDown.play()
+	yield(get_tree().create_timer(0.5), "timeout")
+	get_tree().quit()

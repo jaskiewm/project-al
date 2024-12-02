@@ -240,6 +240,12 @@
 			"character": "character-1682227298.json",
 			"event_id": "dialogic_001",
 			"portrait": "Default",
+			"text": "We want to gather results for all of the program's responses so test all options."
+		},
+		{
+			"character": "character-1682227298.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
 			"text": "Well then, I'll leave you to it."
 		},
 		{
