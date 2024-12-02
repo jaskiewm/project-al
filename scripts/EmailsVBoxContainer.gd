@@ -15,7 +15,7 @@ func _ready():
 	if(GlobalVar.timelineDialogueNumber == 4):
 		$EmailEnd1.visible = true
 		$EmailEnd2.visible = true
-		$"../../../EmailNotif".visible = true
+		$"../../../TaskbarPanel/EmailNotif".visible = true
 	else:
 		$EmailEnd1.visible = false
 		$EmailEnd2.visible = false

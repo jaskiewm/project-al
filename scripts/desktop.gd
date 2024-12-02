@@ -41,3 +41,10 @@ func _on_PowerButton_pressed():
 	$AudioManager/ShutDown.play()
 	yield(get_tree().create_timer(1.0), "timeout")
 	get_tree().quit()
+
+
+func _on_ExitGame_pressed():
+	ClickSound.play()
+	$AudioManager/ShutDown.play()
+	yield(get_tree().create_timer(0.5), "timeout")
+	get_tree().quit()

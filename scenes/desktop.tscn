@@ -1,4 +1,4 @@
-[gd_scene load_steps=125 format=2]
+[gd_scene load_steps=140 format=2]
 
 [ext_resource path="res://art/login_ui/MainMenuBackground.jpg" type="Texture" id=1]
 [ext_resource path="res://fonts/Inconsolota/Inconsolata-SemiBold.ttf" type="DynamicFontData" id=2]
@@ -19,7 +19,7 @@
 [ext_resource path="res://scripts/desktop.gd" type="Script" id=17]
 [ext_resource path="res://scripts/JamieMessages.gd" type="Script" id=18]
 [ext_resource path="res://scripts/StartControl.gd" type="Script" id=19]
-[ext_resource path="res://scripts/MessengerControl.gd" type="Script" id=20]
+[ext_resource path="res://scenes/ExitPopup.gd" type="Script" id=20]
 [ext_resource path="res://scripts/VolumeControl.gd" type="Script" id=21]
 [ext_resource path="res://art/desktop/Music Icon.png" type="Texture" id=22]
 [ext_resource path="res://art/desktop/Music Hover.png" type="Texture" id=23]
@@ -63,7 +63,7 @@ texture = ExtResource( 24 )
 region_rect = Rect2( 0, 0, 256, 256 )
 
 [sub_resource type="StyleBoxFlat" id=66]
-bg_color = Color( 0.298039, 0.298039, 0.298039, 1 )
+bg_color = Color( 0.615686, 0.615686, 0.615686, 1 )
 
 [sub_resource type="StyleBoxEmpty" id=2]
 
@@ -186,9 +186,13 @@ bg_color = Color( 0.87451, 0.87451, 0.894118, 0.87451 )
 [sub_resource type="StyleBoxFlat" id=19]
 bg_color = Color( 0.137255, 0.196078, 0.247059, 0.745098 )
 
+[sub_resource type="StyleBoxFlat" id=96]
+bg_color = Color( 0.615686, 0.615686, 0.615686, 1 )
+
 [sub_resource type="StyleBoxTexture" id=20]
 texture = ExtResource( 7 )
 region_rect = Rect2( 0, 0, 200, 200 )
+modulate_color = Color( 1, 0, 0, 1 )
 
 [sub_resource type="StyleBoxTexture" id=21]
 texture = ExtResource( 8 )
@@ -197,9 +201,10 @@ region_rect = Rect2( 0, 0, 200, 200 )
 [sub_resource type="StyleBoxTexture" id=22]
 texture = ExtResource( 8 )
 region_rect = Rect2( 0, 0, 200, 200 )
+modulate_color = Color( 1, 0, 0, 1 )
 
 [sub_resource type="StyleBoxFlat" id=23]
-bg_color = Color( 0.6, 0.6, 0.6, 0.364706 )
+bg_color = Color( 0.615686, 0.615686, 0.615686, 0.486275 )
 
 [sub_resource type="DynamicFont" id=24]
 size = 11
@@ -235,19 +240,29 @@ bg_color = Color( 0.45098, 0.517647, 0.576471, 1 )
 [sub_resource type="StyleBoxFlat" id=34]
 bg_color = Color( 0.45098, 0.517647, 0.576471, 1 )
 
-[sub_resource type="StyleBoxEmpty" id=35]
+[sub_resource type="StyleBoxFlat" id=97]
+bg_color = Color( 0.760784, 0.760784, 0.760784, 1 )
 
 [sub_resource type="StyleBoxFlat" id=36]
-bg_color = Color( 0.0745098, 0.0862745, 0.172549, 0.764706 )
+bg_color = Color( 0.760784, 0.760784, 0.760784, 1 )
 
 [sub_resource type="StyleBoxFlat" id=37]
 bg_color = Color( 0.345098, 0.364706, 0.466667, 0.478431 )
 
-[sub_resource type="StyleBoxEmpty" id=38]
+[sub_resource type="StyleBoxFlat" id=93]
+bg_color = Color( 0.615686, 0.615686, 0.615686, 1 )
 
 [sub_resource type="StyleBoxTexture" id=39]
 texture = ExtResource( 7 )
 region_rect = Rect2( 0, 0, 200, 200 )
+modulate_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="StreamTexture" id=108]
+flags = 4
+load_path = "res://.import/window_close.png-68c82b8b49238e23c4b1f1b7cb9a545c.stex"
+
+[sub_resource type="StyleBoxTexture" id=109]
+texture = SubResource( 108 )
 
 [sub_resource type="StyleBoxTexture" id=40]
 texture = ExtResource( 8 )
@@ -258,7 +273,11 @@ texture = ExtResource( 14 )
 region_rect = Rect2( 0, 10, 0, 0 )
 
 [sub_resource type="StyleBoxFlat" id=42]
-bg_color = Color( 0.129412, 0.145098, 0.184314, 1 )
+bg_color = Color( 0.396078, 0.396078, 0.396078, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="DynamicFont" id=43]
 size = 27
@@ -266,14 +285,54 @@ font_data = ExtResource( 15 )
 
 [sub_resource type="StyleBoxEmpty" id=44]
 
+[sub_resource type="StreamTexture" id=110]
+flags = 4
+load_path = "res://.import/window_close.png-68c82b8b49238e23c4b1f1b7cb9a545c.stex"
+
+[sub_resource type="StyleBoxTexture" id=111]
+texture = SubResource( 110 )
+
+[sub_resource type="StyleBoxFlat" id=100]
+bg_color = Color( 0.470588, 0.227451, 0.227451, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=101]
+bg_color = Color( 0.403922, 0.196078, 0.196078, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=98]
+bg_color = Color( 0.521569, 0.25098, 0.25098, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [sub_resource type="StyleBoxFlat" id=45]
-bg_color = Color( 0.188235, 0.2, 0.266667, 0.862745 )
+bg_color = Color( 0.760784, 0.760784, 0.760784, 1 )
+
+[sub_resource type="StyleBoxFlat" id=104]
+bg_color = Color( 0.290196, 0.396078, 0.290196, 1 )
+
+[sub_resource type="StyleBoxFlat" id=105]
+bg_color = Color( 0.27451, 0.372549, 0.27451, 1 )
 
 [sub_resource type="StyleBoxFlat" id=46]
-bg_color = Color( 0.176471, 0.243137, 0.176471, 1 )
+bg_color = Color( 0.309804, 0.427451, 0.309804, 1 )
+
+[sub_resource type="StyleBoxFlat" id=106]
+bg_color = Color( 0.470588, 0.227451, 0.227451, 1 )
+
+[sub_resource type="StyleBoxFlat" id=107]
+bg_color = Color( 0.403922, 0.196078, 0.196078, 1 )
 
 [sub_resource type="StyleBoxFlat" id=47]
-bg_color = Color( 0.254902, 0.168627, 0.168627, 1 )
+bg_color = Color( 0.521569, 0.25098, 0.25098, 1 )
 
 [sub_resource type="DynamicFont" id=48]
 size = 19
@@ -302,6 +361,13 @@ region_rect = Rect2( 0, 0, 256, 256 )
 
 [sub_resource type="StyleBoxFlat" id=54]
 bg_color = Color( 0.145098, 0.145098, 0.164706, 1 )
+
+[sub_resource type="StyleBoxFlat" id=94]
+bg_color = Color( 0.615686, 0.615686, 0.615686, 1 )
+
+[sub_resource type="StyleBoxFlat" id=92]
+
+[sub_resource type="StyleBoxFlat" id=95]
 
 [sub_resource type="StyleBoxFlat" id=64]
 content_margin_left = 3.0
@@ -542,6 +608,7 @@ custom_styles/pressed = SubResource( 11 )
 custom_styles/normal = SubResource( 12 )
 
 [node name="Messenger" type="PanelContainer" parent="TaskbarPanel"]
+visible = false
 anchor_top = 1.0
 anchor_bottom = 1.0
 margin_left = 202.0
@@ -575,13 +642,6 @@ custom_styles/hover = SubResource( 84 )
 custom_styles/pressed = SubResource( 86 )
 custom_styles/normal = SubResource( 88 )
 
-[node name="MessengerNotif" type="Panel" parent="TaskbarPanel"]
-margin_left = 241.0
-margin_top = 7.0
-margin_right = 254.0
-margin_bottom = 20.0
-custom_styles/panel = SubResource( 73 )
-
 [node name="EmailNotif" type="Panel" parent="TaskbarPanel"]
 margin_left = 111.0
 margin_top = 7.0
@@ -590,6 +650,8 @@ margin_bottom = 20.0
 custom_styles/panel = SubResource( 73 )
 
 [node name="Time" type="PanelContainer" parent="TaskbarPanel"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -661,6 +723,8 @@ custom_styles/panel = SubResource( 19 )
 [node name="WindowTitle" type="Label" parent="EmailsControl/TitleBar"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_styles/normal = SubResource( 96 )
 text = "Mailbox"
 align = 1
 valign = 1
@@ -864,7 +928,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -584.0
 margin_top = 24.0
-custom_styles/panel = SubResource( 35 )
+custom_styles/panel = SubResource( 97 )
 script = ExtResource( 11 )
 
 [node name="EmailEnd1Preview" type="RichTextLabel" parent="EmailsControl/EmailPreview"]
@@ -1337,7 +1401,8 @@ custom_styles/panel = SubResource( 37 )
 [node name="WindowTitle" type="Label" parent="VideoCallControl/TitleBar"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_styles/normal = SubResource( 38 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_styles/normal = SubResource( 93 )
 text = "FaceChat"
 align = 1
 valign = 1
@@ -1348,6 +1413,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -32.0
 custom_styles/hover = SubResource( 39 )
+custom_styles/pressed = SubResource( 109 )
 custom_styles/normal = SubResource( 40 )
 
 [node name="Icons" type="PanelContainer" parent="VideoCallControl"]
@@ -1415,6 +1481,106 @@ margin_right = -55.0
 margin_bottom = 559.0
 rect_pivot_offset = Vector2( 644, 523 )
 
+[node name="ExitPopup" type="Control" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -264.0
+margin_top = -106.5
+margin_right = 264.0
+margin_bottom = 106.5
+script = ExtResource( 20 )
+
+[node name="Background" type="Panel" parent="ExitPopup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 36 )
+
+[node name="WindowTitle2" type="Label" parent="ExitPopup"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -146.5
+margin_top = 63.0
+margin_right = 146.5
+margin_bottom = 115.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Are you sure you want to exit the game?"
+align = 1
+valign = 1
+
+[node name="TitleBar" type="Panel" parent="ExitPopup"]
+anchor_right = 1.0
+margin_bottom = 32.0
+custom_styles/panel = SubResource( 37 )
+
+[node name="WindowTitle" type="Label" parent="ExitPopup/TitleBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_styles/normal = SubResource( 93 )
+text = "Exit Game"
+align = 1
+valign = 1
+
+[node name="Close" type="Button" parent="ExitPopup/TitleBar"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -32.0
+margin_bottom = 32.0
+custom_styles/hover = SubResource( 39 )
+custom_styles/pressed = SubResource( 111 )
+custom_styles/normal = SubResource( 40 )
+
+[node name="VideoCallImagePlanning1" type="PanelContainer" parent="ExitPopup"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -907.5
+margin_top = -306.5
+margin_right = 15.5
+margin_bottom = 434.5
+rect_pivot_offset = Vector2( 644, 523 )
+
+[node name="VideoCallImagePlanning2" type="PanelContainer" parent="ExitPopup"]
+visible = false
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -909.0
+margin_top = -373.64
+margin_right = -55.0
+margin_bottom = -45.64
+rect_pivot_offset = Vector2( 644, 523 )
+
+[node name="VideoCallImagePlanning3" type="PanelContainer" parent="ExitPopup"]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -909.0
+margin_top = 178.0
+margin_right = -55.0
+margin_bottom = 559.0
+rect_pivot_offset = Vector2( 644, 523 )
+
+[node name="ExitGame" type="Button" parent="ExitPopup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -65.5
+margin_top = 26.0
+margin_right = 65.5
+margin_bottom = 68.0
+custom_styles/hover = SubResource( 100 )
+custom_styles/pressed = SubResource( 101 )
+custom_styles/normal = SubResource( 98 )
+text = "Exit Game"
+
 [node name="VideoRequest" type="Control" parent="."]
 visible = false
 anchor_left = 1.0
@@ -1437,6 +1603,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -40.0
 margin_right = -121.0
+custom_styles/hover = SubResource( 104 )
+custom_styles/pressed = SubResource( 105 )
 custom_styles/normal = SubResource( 46 )
 text = "Accept"
 
@@ -1446,6 +1614,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 119.0
 margin_top = -40.0
+custom_styles/hover = SubResource( 106 )
+custom_styles/pressed = SubResource( 107 )
 custom_styles/normal = SubResource( 47 )
 text = "Decline"
 
@@ -1458,6 +1628,7 @@ margin_left = -73.0
 margin_top = -48.0
 margin_right = 47.0
 margin_bottom = 20.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 48 )
 tab_size = 9
 text = "Martin
@@ -1598,9 +1769,9 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -248.0
-margin_top = -228.0
+margin_top = -240.0
 margin_right = -230.0
-margin_bottom = -67.0
+margin_bottom = -79.0
 script = ExtResource( 36 )
 
 [node name="Panel" type="Panel" parent="MusicControl"]
@@ -1622,9 +1793,9 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -178.0
-margin_top = -228.0
+margin_top = -240.0
 margin_right = -160.0
-margin_bottom = -67.0
+margin_bottom = -79.0
 script = ExtResource( 21 )
 
 [node name="Panel" type="Panel" parent="VolumeControl"]
@@ -1650,23 +1821,26 @@ margin_top = 114.0
 margin_right = 1070.0
 margin_bottom = 835.0
 size_flags_vertical = 0
-script = ExtResource( 20 )
 
 [node name="Wallpaper" type="Panel" parent="MessengerControl"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+custom_styles/panel = SubResource( 94 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MessengerControl/Wallpaper"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="TitleBar" type="Panel" parent="MessengerControl/Wallpaper/VBoxContainer"]
+modulate = Color( 0.615686, 0.615686, 0.615686, 1 )
 margin_right = 427.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 0, 30 )
 size_flags_horizontal = 3
+custom_styles/panel = SubResource( 92 )
 
 [node name="MessengerTitle" type="Label" parent="MessengerControl/Wallpaper/VBoxContainer/TitleBar"]
+modulate = Color( 0, 0, 0, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 text = "Messenger"
@@ -1676,8 +1850,8 @@ valign = 1
 [node name="CloseButton" type="Button" parent="MessengerControl/Wallpaper/VBoxContainer/TitleBar"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -24.0
-margin_bottom = 22.0
+margin_left = -30.0
+margin_bottom = 30.0
 rect_min_size = Vector2( 24, 24 )
 custom_styles/hover = SubResource( 20 )
 custom_styles/pressed = SubResource( 21 )
@@ -1689,12 +1863,10 @@ margin_right = 427.0
 margin_bottom = 721.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_styles/panel = SubResource( 95 )
 
 [node name="SingleMessages" type="VBoxContainer" parent="MessengerControl/Wallpaper/VBoxContainer/PanelContainer"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 420.0
-margin_bottom = 7.0
+margin_right = 427.0
 size_flags_vertical = 0
 
 [node name="Message1" type="PanelContainer" parent="MessengerControl/Wallpaper/VBoxContainer/PanelContainer/SingleMessages"]
@@ -1940,13 +2112,11 @@ custom_styles/normal = SubResource( 62 )
 text = "---Payment of $1,200.00 submitted---"
 
 [node name="Messages" type="VBoxContainer" parent="MessengerControl/Wallpaper/VBoxContainer/PanelContainer"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 420.0
-margin_bottom = 680.0
+margin_right = 427.0
+margin_bottom = 687.0
 
 [node name="JamieMessages" type="Button" parent="MessengerControl/Wallpaper/VBoxContainer/PanelContainer/Messages"]
-margin_right = 413.0
+margin_right = 427.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 size_flags_horizontal = 3
@@ -1977,12 +2147,12 @@ rect_min_size = Vector2( 50, 50 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MessengerControl/Wallpaper/VBoxContainer/PanelContainer/Messages/JamieMessages/HBoxContainer"]
 margin_left = 60.0
-margin_right = 403.0
+margin_right = 417.0
 margin_bottom = 50.0
 size_flags_horizontal = 3
 
 [node name="MessageName" type="Label" parent="MessengerControl/Wallpaper/VBoxContainer/PanelContainer/Messages/JamieMessages/HBoxContainer/VBoxContainer"]
-margin_right = 343.0
+margin_right = 357.0
 margin_bottom = 23.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -1992,7 +2162,7 @@ clip_text = true
 
 [node name="MessageDescr" type="Label" parent="MessengerControl/Wallpaper/VBoxContainer/PanelContainer/Messages/JamieMessages/HBoxContainer/VBoxContainer"]
 margin_top = 27.0
-margin_right = 343.0
+margin_right = 357.0
 margin_bottom = 50.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -2002,7 +2172,7 @@ clip_text = true
 
 [node name="LoanMessages" type="Button" parent="MessengerControl/Wallpaper/VBoxContainer/PanelContainer/Messages"]
 margin_top = 64.0
-margin_right = 413.0
+margin_right = 427.0
 margin_bottom = 124.0
 rect_min_size = Vector2( 0, 60 )
 size_flags_horizontal = 3
@@ -2026,12 +2196,12 @@ rect_min_size = Vector2( 50, 50 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MessengerControl/Wallpaper/VBoxContainer/PanelContainer/Messages/LoanMessages/HBoxContainer"]
 margin_left = 60.0
-margin_right = 403.0
+margin_right = 417.0
 margin_bottom = 50.0
 size_flags_horizontal = 3
 
 [node name="MessageName" type="Label" parent="MessengerControl/Wallpaper/VBoxContainer/PanelContainer/Messages/LoanMessages/HBoxContainer/VBoxContainer"]
-margin_right = 343.0
+margin_right = 357.0
 margin_bottom = 23.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -2041,7 +2211,7 @@ clip_text = true
 
 [node name="MessageDescr" type="Label" parent="MessengerControl/Wallpaper/VBoxContainer/PanelContainer/Messages/LoanMessages/HBoxContainer/VBoxContainer"]
 margin_top = 27.0
-margin_right = 343.0
+margin_right = 357.0
 margin_bottom = 50.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -2092,8 +2262,7 @@ color = Color( 0.623529, 0.623529, 0.623529, 0.552941 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 1.0
-margin_right = 13.0
-margin_bottom = 32.0
+margin_right = -563.0
 color = Color( 1, 1, 1, 0.788235 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="LoadingBar"]
@@ -2120,7 +2289,7 @@ valign = 2
 [connection signal="pressed" from="TaskbarPanel/Emails/EmailsButton" to="EmailsControl/EmailsList/EmailsVBoxContainer" method="_on_EmailsButton_pressed"]
 [connection signal="pressed" from="TaskbarPanel/VideoCall/VideoCallButton" to="VideoCallControl" method="_on_VideoCallButton_pressed"]
 [connection signal="pressed" from="TaskbarPanel/Messenger/MessengerButton" to="MessengerControl" method="_on_MessengerButton_pressed"]
-[connection signal="pressed" from="TaskbarPanel/Power/PowerButton" to="." method="_on_PowerButton_pressed"]
+[connection signal="pressed" from="TaskbarPanel/Power/PowerButton" to="ExitPopup" method="_on_PowerButton_pressed"]
 [connection signal="pressed" from="TaskbarPanel/Volume/VolumeButton" to="VolumeControl" method="_on_VolumeButton_pressed"]
 [connection signal="pressed" from="TaskbarPanel/Music/MusicButton" to="MusicControl" method="_on_Button_pressed"]
 [connection signal="pressed" from="EmailsControl/TitleBar/CloseButton" to="EmailsControl" method="_on_CloseButton_pressed"]
@@ -2142,6 +2311,8 @@ valign = 2
 [connection signal="pressed" from="EmailsControl/EmailsList/EmailsVBoxContainer/Email6" to="EmailsControl/EmailsList/EmailsVBoxContainer" method="_on_Email6_pressed"]
 [connection signal="pressed" from="EmailsControl/EmailsList/EmailsVBoxContainer/Email6" to="EmailsControl/EmailPreview" method="_on_Email6_pressed"]
 [connection signal="pressed" from="VideoCallControl/TitleBar/Close" to="VideoCallControl" method="_on_Close_pressed"]
+[connection signal="pressed" from="ExitPopup/TitleBar/Close" to="ExitPopup" method="_on_Close_pressed"]
+[connection signal="pressed" from="ExitPopup/ExitGame" to="." method="_on_ExitGame_pressed"]
 [connection signal="pressed" from="VideoRequest/Panel/Accept" to="VideoCallControl" method="_on_Accept_pressed"]
 [connection signal="pressed" from="VideoRequest/Panel/Accept" to="VideoRequest" method="_on_Accept_pressed"]
 [connection signal="pressed" from="VideoRequest/Panel/Decline" to="VideoRequest" method="_on_Decline_pressed"]
