@@ -11,17 +11,20 @@ var emailMin = time.minute
 func _ready():
 	if(time.minute >10):
 		emailMin = (time.minute - 8)
-	else:
+	
+	if(emailMin < 10):
 		time_return = String(time.hour) +":"+"0"+String(time.minute)
-	time_return = String(emailHour) +":"+String(emailMin)
+	else:
+		time_return = String(emailHour) +":"+String(emailMin)
+	
 	text = time_return
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if(time.minute >10):
-		emailMin = (time.minute - 8)
-	else:
-		time_return = String(time.hour) +":"+"0"+String(time.minute)
-	time_return = String(emailHour) +":"+String(emailMin)
+	#if(time.minute >10):
+	#	emailMin = (time.minute - 8)
+	#else:
+	#	time_return = String(time.hour) +":"+"0"+String(time.minute)
+	#time_return = String(emailHour) +":"+String(emailMin)
 	text = time_return
