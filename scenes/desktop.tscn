@@ -181,9 +181,6 @@ region_rect = Rect2( 0, 0, 256, 256 )
 texture = ExtResource( 22 )
 region_rect = Rect2( 0, 0, 256, 256 )
 
-[sub_resource type="StyleBoxFlat" id=54]
-bg_color = Color( 0.145098, 0.145098, 0.164706, 1 )
-
 [sub_resource type="StyleBoxFlat" id=18]
 
 [sub_resource type="StyleBoxFlat" id=19]
@@ -363,6 +360,9 @@ region_rect = Rect2( 0, 0, 256, 256 )
 [sub_resource type="StyleBoxTexture" id=50]
 texture = ExtResource( 3 )
 region_rect = Rect2( 0, 0, 256, 256 )
+
+[sub_resource type="StyleBoxFlat" id=54]
+bg_color = Color( 0.145098, 0.145098, 0.164706, 1 )
 
 [sub_resource type="StyleBoxFlat" id=94]
 bg_color = Color( 0.615686, 0.615686, 0.615686, 1 )
@@ -706,58 +706,6 @@ margin_bottom = 48.0
 custom_styles/hover = SubResource( 70 )
 custom_styles/pressed = SubResource( 71 )
 custom_styles/normal = SubResource( 72 )
-
-[node name="MusicControl" type="Control" parent="TaskbarPanel"]
-visible = false
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -248.0
-margin_top = -228.0
-margin_right = -230.0
-margin_bottom = -67.0
-script = ExtResource( 36 )
-
-[node name="Panel" type="Panel" parent="TaskbarPanel/MusicControl"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-
-[node name="MusicSlider" type="VSlider" parent="TaskbarPanel/MusicControl/Panel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 7.0
-margin_bottom = -9.0
-min_value = -32.0
-max_value = 24.0
-
-[node name="VolumeControl" type="Control" parent="TaskbarPanel"]
-visible = false
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -178.0
-margin_top = -228.0
-margin_right = -160.0
-margin_bottom = -67.0
-script = ExtResource( 21 )
-
-[node name="Panel" type="Panel" parent="TaskbarPanel/VolumeControl"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_styles/panel = SubResource( 54 )
-
-[node name="VolumeSlider" type="VSlider" parent="TaskbarPanel/VolumeControl/Panel"]
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -8.0
-margin_top = 7.0
-margin_right = 8.0
-margin_bottom = -9.0
-min_value = -32.0
-max_value = 24.0
 
 [node name="EmailsControl" type="Control" parent="."]
 visible = false
@@ -1843,7 +1791,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 7.0
 margin_bottom = -9.0
-min_value = -32.0
+min_value = -40.0
 max_value = 24.0
 
 [node name="VolumeControl" type="Control" parent="."]
@@ -1871,7 +1819,7 @@ margin_left = -8.0
 margin_top = 7.0
 margin_right = 8.0
 margin_bottom = -9.0
-min_value = -32.0
+min_value = -40.0
 max_value = 24.0
 
 [node name="MessengerControl" type="Control" parent="."]
@@ -2381,6 +2329,8 @@ anims/loading_bar = SubResource( 75 )
 [connection signal="pressed" from="StartControl/VBoxContainer/StartMessenger" to="MessengerControl" method="_on_StartMessenger_pressed"]
 [connection signal="pressed" from="StartControl/VBoxContainer/Email" to="EmailsControl" method="_on_Email_pressed"]
 [connection signal="pressed" from="StartControl/VBoxContainer/Logout" to="." method="_on_Logout_pressed"]
+[connection signal="value_changed" from="MusicControl/Panel/MusicSlider" to="MusicControl" method="_on_MusicSlider_value_changed"]
+[connection signal="value_changed" from="VolumeControl/Panel/VolumeSlider" to="VolumeControl" method="_on_VolumeSlider_value_changed"]
 [connection signal="pressed" from="MessengerControl/Wallpaper/VBoxContainer/TitleBar/CloseButton" to="MessengerControl" method="_on_CloseButton_pressed"]
 [connection signal="pressed" from="MessengerControl/Wallpaper/VBoxContainer/PanelContainer/SingleMessages/Message1/VBoxContainer2/HBoxContainer/BackButton" to="MessengerControl" method="_on_BackButton_pressed"]
 [connection signal="pressed" from="MessengerControl/Wallpaper/VBoxContainer/PanelContainer/SingleMessages/Message1/VBoxContainer2/Button" to="MessengerControl/Wallpaper/VBoxContainer/PanelContainer/SingleMessages/Message1" method="_on_Button_pressed"]

@@ -17,18 +17,18 @@ func _on_VolumeButton_pressed():
 	ClickSound.play()
 	visible = !visible
 
-#-80 t0 24
+#-40 t0 24
 func _on_VolumeSlider_value_changed(value):
 	AudioServer.set_bus_volume_db(soundBus,value)
 	GlobalVar.soundVolume = value
-	if (GlobalVar.soundVolume <= -30):
+	if (GlobalVar.soundVolume <= -35):
 		AudioServer.set_bus_mute(AudioServer.get_bus_index("Sounds"), true)
 		musicMuted = true
-	elif(musicMuted == true && GlobalVar.soundVolume > -32):
+	elif(musicMuted == true && GlobalVar.soundVolume > -35):
 		AudioServer.set_bus_mute(AudioServer.get_bus_index("Sounds"), false)
 		musicMuted = false
 
 func set_slider_position(position: float) -> void:
-	position = clamp(position,-30,24)
+	position = clamp(position,-40,24)
 	if volume != null:
 		volume.value = position
