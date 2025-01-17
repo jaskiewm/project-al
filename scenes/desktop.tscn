@@ -1,4 +1,4 @@
-[gd_scene load_steps=140 format=2]
+[gd_scene load_steps=139 format=2]
 
 [ext_resource path="res://art/login_ui/MainMenuBackground.jpg" type="Texture" id=1]
 [ext_resource path="res://fonts/Inconsolota/Inconsolata-SemiBold.ttf" type="DynamicFontData" id=2]
@@ -38,7 +38,6 @@
 [ext_resource path="res://scripts/MusicControl.gd" type="Script" id=36]
 [ext_resource path="res://Sounds/Laugh Women.tres" type="AudioStream" id=37]
 [ext_resource path="res://scripts/emailTimeLabel.gd" type="Script" id=38]
-[ext_resource path="res://addons/dialogic/Documentation/Theme/Font/NotoSans-Bold.ttf" type="DynamicFontData" id=39]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 1 )
@@ -182,13 +181,6 @@ region_rect = Rect2( 0, 0, 256, 256 )
 texture = ExtResource( 22 )
 region_rect = Rect2( 0, 0, 256, 256 )
 
-[sub_resource type="StyleBoxFlat" id=73]
-bg_color = Color( 0, 0.270588, 0.368627, 1 )
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
 [sub_resource type="StyleBoxFlat" id=54]
 bg_color = Color( 0.145098, 0.145098, 0.164706, 1 )
 
@@ -274,6 +266,7 @@ load_path = "res://.import/window_close.png-68c82b8b49238e23c4b1f1b7cb9a545c.ste
 
 [sub_resource type="StyleBoxTexture" id=109]
 texture = SubResource( 108 )
+region_rect = Rect2( 0, 0, 200, 200 )
 
 [sub_resource type="StyleBoxTexture" id=40]
 texture = ExtResource( 8 )
@@ -302,6 +295,7 @@ load_path = "res://.import/window_close.png-68c82b8b49238e23c4b1f1b7cb9a545c.ste
 
 [sub_resource type="StyleBoxTexture" id=111]
 texture = SubResource( 110 )
+region_rect = Rect2( 0, 0, 200, 200 )
 
 [sub_resource type="StyleBoxFlat" id=100]
 bg_color = Color( 0.470588, 0.227451, 0.227451, 1 )
@@ -358,45 +352,17 @@ region_rect = Rect2( 0, 0, 255.955, 256 )
 axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
 
-[sub_resource type="DynamicFontData" id=88]
-font_path = "res://fonts/Inconsolota/Inconsolata-Black.ttf"
-
-[sub_resource type="DynamicFont" id=89]
-size = 14
-font_data = SubResource( 88 )
-
 [sub_resource type="StyleBoxTexture" id=51]
 texture = ExtResource( 29 )
 region_rect = Rect2( 0, 0, 256, 256 )
-
-[sub_resource type="DynamicFontData" id=90]
-font_path = "res://fonts/Inconsolota/Inconsolata-Black.ttf"
-
-[sub_resource type="DynamicFont" id=91]
-size = 14
-font_data = SubResource( 90 )
 
 [sub_resource type="StyleBoxTexture" id=52]
 texture = ExtResource( 31 )
 region_rect = Rect2( 0, 0, 256, 256 )
 
-[sub_resource type="DynamicFontData" id=84]
-font_path = "res://fonts/Inconsolota/Inconsolata-Black.ttf"
-
-[sub_resource type="DynamicFont" id=85]
-size = 14
-font_data = SubResource( 84 )
-
 [sub_resource type="StyleBoxTexture" id=50]
 texture = ExtResource( 3 )
 region_rect = Rect2( 0, 0, 256, 256 )
-
-[sub_resource type="DynamicFontData" id=86]
-font_path = "res://fonts/Inconsolota/Inconsolata-Black.ttf"
-
-[sub_resource type="DynamicFont" id=87]
-size = 14
-font_data = SubResource( 86 )
 
 [sub_resource type="StyleBoxFlat" id=94]
 bg_color = Color( 0.615686, 0.615686, 0.615686, 1 )
@@ -465,13 +431,6 @@ bg_color = Color( 0.190606, 0.1817, 0.214355, 1 )
 [sub_resource type="StyleBoxFlat" id=67]
 bg_color = Color( 0, 0, 0, 1 )
 
-[sub_resource type="DynamicFontData" id=81]
-font_path = "res://fonts/Inconsolota/Inconsolata-Black.ttf"
-
-[sub_resource type="DynamicFont" id=82]
-size = 27
-font_data = SubResource( 81 )
-
 [sub_resource type="StyleBoxEmpty" id=83]
 
 [sub_resource type="Animation" id=74]
@@ -517,10 +476,6 @@ tracks/0/keys = {
 "values": [ Vector2( 12, 15 ), Vector2( 574, 15 ) ]
 }
 
-[sub_resource type="DynamicFont" id=81]
-size = 32
-font_data = ExtResource( 39 )
-
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -548,6 +503,7 @@ bus = "Sounds"
 
 [node name="CreepyLaugh" type="AudioStreamPlayer" parent="AudioManager"]
 stream = ExtResource( 37 )
+volume_db = -10.0
 bus = "Sounds"
 
 [node name="Wallpaper" type="PanelContainer" parent="."]
@@ -750,20 +706,6 @@ margin_bottom = 48.0
 custom_styles/hover = SubResource( 70 )
 custom_styles/pressed = SubResource( 71 )
 custom_styles/normal = SubResource( 72 )
-
-[node name="EmailNotif" type="Panel" parent="TaskbarPanel"]
-margin_left = 117.0
-margin_top = 7.0
-margin_right = 130.0
-margin_bottom = 20.0
-custom_styles/panel = SubResource( 73 )
-
-[node name="MessengerNotif" type="Panel" parent="TaskbarPanel"]
-margin_left = 247.0
-margin_top = 7.0
-margin_right = 260.0
-margin_bottom = 20.0
-custom_styles/panel = SubResource( 73 )
 
 [node name="MusicControl" type="Control" parent="TaskbarPanel"]
 visible = false
@@ -1047,7 +989,6 @@ custom_styles/panel = SubResource( 97 )
 script = ExtResource( 11 )
 
 [node name="EmailEnd1Preview" type="RichTextLabel" parent="EmailsControl/EmailPreview"]
-visible = false
 margin_left = 16.0
 margin_top = 16.0
 margin_right = 568.0
@@ -1454,6 +1395,7 @@ Best,
 Calcifer"
 
 [node name="Email6Preview" type="RichTextLabel" parent="EmailsControl/EmailPreview"]
+visible = false
 margin_left = 16.0
 margin_top = 16.0
 margin_right = 568.0
@@ -2401,20 +2343,6 @@ color = Color( 1, 1, 1, 0.788235 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="LoadingBar"]
 anims/RESET = SubResource( 74 )
 anims/loading_bar = SubResource( 75 )
-
-[node name="LoadingBar" type="Label" parent="LoadingBar"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -285.0
-margin_top = -108.0
-margin_right = 302.0
-margin_bottom = -21.0
-custom_fonts/font = SubResource( 81 )
-text = "INSTALLING"
-align = 1
-valign = 2
 
 [connection signal="pressed" from="ProjectAlProgram" to="." method="_on_ProjectAlProgram_pressed"]
 [connection signal="pressed" from="TaskbarPanel/Start/StartButton" to="StartControl" method="_on_StartButton_pressed"]
